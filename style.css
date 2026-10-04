@@ -1,0 +1,24 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:radial-gradient(circle at top,#fff8e7 0%,#f9e4b7 35%,#e8c88a 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#3a2a12}
+.container{width:90%;max-width:520px;margin:20px;position:relative;min-height:500px}
+.envelope-wrapper{text-align:center;cursor:pointer;transition:all .6s ease;position:absolute;width:100%;top:50%;left:0;transform:translateY(-50%);z-index:10}
+.envelope-wrapper.hidden{opacity:0;transform:translateY(-50%) scale(.8);pointer-events:none}
+.envelope{width:300px;height:200px;background:#c99a4b;margin:0 auto;position:relative;border-radius:0 0 10px 10px;box-shadow:0 15px 35px rgba(0,0,0,.2)}
+.seal{position:absolute;top:50%;left:50%;transform:translate(-50%,-30%);font-size:50px;z-index:4;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{transform:translate(-50%,-30%) scale(1)}50%{transform:translate(-50%,-30%) scale(1.1)}}
+.tap-text{margin-top:20px;color:#7a5a2a;letter-spacing:1px}
+.card{background:white;border-radius:20px;padding:40px 30px;box-shadow:0 20px 60px rgba(0,0,0,.15);transform:scale(.7) translateY(100px);opacity:0;pointer-events:none;transition:all .8s cubic-bezier(.175,.885,.32,1.275);position:relative}
+.card.show{transform:scale(1) translateY(0);opacity:1;pointer-events:auto}
+.card::before{content:'';position:absolute;top:0;left:0;width:100%;height:8px;background:linear-gradient(90deg,#c99a4b,#f9e4b7,#c99a4b);border-radius:20px 20px 0 0}
+.badge{display:inline-block;background:#fff2d6;color:#a67c2e;padding:6px 14px;border-radius:20px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+h1{font-family:'Playfair Display',serif;font-size:32px;margin-top:15px;text-align:center} h1 span{color:#c99a4b}
+.subtitle{font-size:14px;color:#8a7460;text-align:center;margin-bottom:25px}
+.message{font-size:15px;line-height:1.7;margin-bottom:15px;color:#4a3a27;font-weight:300}
+.highlight{background:#fff8e7;border-left:4px solid #c99a4b;padding:12px 15px;border-radius:0 10px 10px 0;font-style:italic;font-family:'Playfair Display',serif}
+.signature{margin-top:25px;text-align:right}
+.input-group{display:flex;gap:10px;margin:15px 0}
+.input-group input{flex:1;padding:10px 14px;border:1.5px solid #e8d5b0;border-radius:10px;outline:none}
+button{padding:12px 20px;border:none;border-radius:10px;cursor:pointer;font-weight:500;width:100%}
+#personalizeBtn{background:#3a2a12;color:white} #personalizeBtn:hover{background:#5a4220}
+#resetBtn{background:transparent;color:#8a7460;margin-top:10px;font-size:13px}
+footer{margin-top:30px;font-size:12px;color:#8a7460;text-align:center}

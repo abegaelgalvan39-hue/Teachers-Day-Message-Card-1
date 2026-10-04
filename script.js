@@ -1,0 +1,27 @@
+const envelopeWrapper = document.getElementById('envelopeWrapper');
+const card = document.getElementById('card');
+const teacherInput = document.getElementById('teacherInput');
+const studentInput = document.getElementById('studentInput');
+const personalizeBtn = document.getElementById('personalizeBtn');
+const resetBtn = document.getElementById('resetBtn');
+const teacherNameDisplay = document.getElementById('teacherNameDisplay');
+const studentNameDisplay = document.getElementById('studentNameDisplay');
+
+envelopeWrapper.addEventListener('click', () => {
+  envelopeWrapper.classList.add('hidden');
+  setTimeout(() => { card.classList.add('show'); }, 400);
+});
+
+personalizeBtn.addEventListener('click', () => {
+  const tName = teacherInput.value.trim();
+  const sName = studentInput.value.trim();
+  if(tName) teacherNameDisplay.textContent = tName;
+  if(sName) studentNameDisplay.textContent = sName;
+  personalizeBtn.textContent = "Card Personalized! ❤️";
+  setTimeout(() => personalizeBtn.textContent = "Personalize Card ✨", 2000);
+});
+
+resetBtn.addEventListener('click', () => {
+  card.classList.remove('show');
+  setTimeout(() => { envelopeWrapper.classList.remove('hidden'); }, 500);
+});
