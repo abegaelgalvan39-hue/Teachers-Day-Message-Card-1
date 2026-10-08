@@ -1,6 +1,6 @@
 # Teachers' Day Message Card - For Sir Randy Bello
 A personalized, interactive Message Card webpage built with HTML, CSS, and JavaScript.
-Made by: Sheryn Joyce Azupardo
+Made by: Abegael Galvan 
 Dedicated to: Sir Randy Bello
 
 Features: Envelope animation, Personalization, Responsive design.
